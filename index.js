@@ -51,3 +51,23 @@ function createPhoneNumber(numbers) {
     }
   }
   return phoneNum;
+}
+
+// https://www.codewars.com/kata/54e6533c92449cc251001667/train/javascript
+// Unique Order
+
+var uniqueInOrder = function (iterable) {
+  let prevChar = '';
+  const resultArr = [];
+  let i = 0;
+  while (i < iterable.length) {
+    if (prevChar === iterable[i]) {
+      i++;
+    } else {
+      resultArr.push(iterable[i]);
+      prevChar = iterable[i]
+      i++;
+    }
+  }
+  return resultArr;
+}
