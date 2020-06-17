@@ -32,3 +32,42 @@ function changeEnough(change, amountDue) {
     return false;
   }
 }
+// https://edabit.com/challenge/xDNkweBBNXBMyQRdG
+// Create a phone number
+
+function createPhoneNumber(numbers) {
+  let phoneNum = "";
+  for (let i = 0; i < numbers.length; i++) {
+    if (i === 0) {
+      phoneNum += "(" + numbers[i];
+    } else if (i === 2) {
+      phoneNum += numbers[i] + ")"
+    } else if (i === 3) {
+      phoneNum += " " + numbers[i];
+    } else if (i === 6) {
+      phoneNum += "-" + numbers[i];
+    } else {
+      phoneNum += numbers[i];
+    }
+  }
+  return phoneNum;
+}
+
+// https://www.codewars.com/kata/54e6533c92449cc251001667/train/javascript
+// Unique Order
+
+var uniqueInOrder = function (iterable) {
+  let prevChar = '';
+  const resultArr = [];
+  let i = 0;
+  while (i < iterable.length) {
+    if (prevChar === iterable[i]) {
+      i++;
+    } else {
+      resultArr.push(iterable[i]);
+      prevChar = iterable[i]
+      i++;
+    }
+  }
+  return resultArr;
+}
