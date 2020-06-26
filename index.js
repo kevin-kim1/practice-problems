@@ -71,3 +71,49 @@ var uniqueInOrder = function (iterable) {
   }
   return resultArr;
 }
+
+// https://edabit.com/challenge/xuRjEej9F9ZG3vg7M
+// Replace Vowel
+
+function replaceVowel(word) {
+  let wordArr = word.split("");
+  for (let i = 0; i < wordArr.length; i++) {
+    if (wordArr[i] === 'a') {
+      wordArr[i] = '1';
+    } else if (wordArr[i] === 'e') {
+      wordArr[i] = '2';
+    } else if (wordArr[i] === 'i') {
+      wordArr[i] = '3';
+    } else if (wordArr[i] === 'o') {
+      wordArr[i] = '4';
+    } else if (wordArr[i] === 'u') {
+      wordArr[i] = '5';
+    }
+  }
+  let result = wordArr.join('');
+  return result;
+}
+
+// https://edabit.com/challenge/AtoWYYC9THAH5HbS2
+// Basic Calculator
+
+function calculator(num1, operator, num2) {
+		let result = 0;
+		if (operator === '+') {
+			 result = num1 + num2;
+		} else if (operator === '-') {
+				result = num1 - num2;
+		} else if (operator === '/' && num2 !== 0) {
+				result = num1 / num2;
+		} else if (operator === '*') {
+				result = num1 * num2;
+		} else {
+			result = "Can't divide by 0!";
+		}
+		return result;
+}
+
+// https://edabit.com/challenge/AtoWYYC9THAH5HbS2
+// ES6: Destructuring Objects I
+
+let str = `( { one, two } = { one : 1, two : 2}).toString()`;
