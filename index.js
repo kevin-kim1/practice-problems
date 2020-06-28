@@ -117,3 +117,12 @@ function calculator(num1, operator, num2) {
 // ES6: Destructuring Objects I
 
 let str = `( { one, two } = { one : 1, two : 2}).toString()`;
+
+// https://edabit.com/challenge/27Toh4rACcmRvRLrb
+// sumArray
+
+function sumArray(arr) {
+  let result = 0;
+  result = arr.flat(Infinity).reduce((sum, num) => sum + num);
+  return result;
+}
