@@ -126,3 +126,11 @@ function sumArray(arr) {
   result = arr.flat(Infinity).reduce((sum, num) => sum + num);
   return result;
 }
+
+
+// https://edabit.com/challenge/Q2j5FTFtsk7PdzrQk
+// Remainder operator
+
+function remainder(x, y) {
+  return x % y;
+}
