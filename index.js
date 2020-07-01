@@ -126,3 +126,34 @@ function sumArray(arr) {
   result = arr.flat(Infinity).reduce((sum, num) => sum + num);
   return result;
 }
+
+
+// https://edabit.com/challenge/Q2j5FTFtsk7PdzrQk
+// Remainder operator
+
+function remainder(x, y) {
+  return x % y;
+}
+
+// https://edabit.com/challenge/NEPFa3NZSd8iiF3ps
+// Date Formatter MMDDYYYY
+
+function formatDate(date) {
+  const resultArr = [];
+  const dayHold = [];
+  const monthHold = [];
+  const dateArr = date.split("");
+  for (let i = dateArr.length - 1; i >= 0; i--) {
+    if (i < 2) {
+      monthHold.unshift(dateArr[i]);
+    }
+    if (i > 2 && i < 5) {
+      dayHold.unshift(dateArr[i]);
+    }
+    if (i > 5)
+      resultArr.unshift(dateArr[i]);
+  }
+  resultArr.push(dayHold.join(""));
+  resultArr.push(monthHold.join(""));
+  return resultArr.join("");
+}
