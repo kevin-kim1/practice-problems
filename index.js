@@ -126,3 +126,50 @@ function sumArray(arr) {
   result = arr.flat(Infinity).reduce((sum, num) => sum + num);
   return result;
 }
+
+
+
+function capToFront(s) {
+  const upperArr = [];
+  const lowerArr = [];
+  let resultArr = [];
+  s.split("");
+  for (let i = 0; i < s.length; i++) {
+    let currentChar = s[i];
+    if (currentChar === currentChar.toUpperCase()) {
+      upperArr.push(currentChar);
+    }
+  }
+  for (let i = 0; i < s.length; i++) {
+    let currentChar = s[i];
+    if (currentChar === currentChar.toLowerCase()) {
+      lowerArr.push(currentChar);
+    }
+  }
+  resultArr = upperArr.concat(lowerArr);
+  return resultArr.join("");
+}
+
+// https://edabit.com/challenge/8n9RyHThC3dNEPCng
+// Move Capital Letters to the Front
+
+function capToFront(s) {
+  const upperArr = [];
+  const lowerArr = [];
+  let resultArr = [];
+  s.split("");
+  for (let i = 0; i < s.length; i++) {
+    let currentChar = s[i];
+    if (currentChar === currentChar.toUpperCase()) {
+      upperArr.push(currentChar);
+    }
+  }
+  for (let i = 0; i < s.length; i++) {
+    let currentChar = s[i];
+    if (currentChar === currentChar.toLowerCase()) {
+      lowerArr.push(currentChar);
+    }
+  }
+  resultArr = upperArr.concat(lowerArr);
+  return resultArr.join("");
+}
