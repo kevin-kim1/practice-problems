@@ -126,3 +126,18 @@ function sumArray(arr) {
   result = arr.flat(Infinity).reduce((sum, num) => sum + num);
   return result;
 }
+
+// https://edabit.com/challenge/6R6gReGTGwzpwuffD
+// Seven Boom
+
+function sevenBoom(arr) {
+  const str = arr.toString();
+  const regex = /7/g;
+  const found = str.match(regex);
+  if (found === null) {
+    return 'there is no 7 in the array';
+  }
+  if (found.toString() === '7') {
+    return 'Boom!';
+  }
+}
