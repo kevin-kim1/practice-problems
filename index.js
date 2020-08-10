@@ -128,6 +128,50 @@ function sumArray(arr) {
 }
 
 
+
+function capToFront(s) {
+  const upperArr = [];
+  const lowerArr = [];
+  let resultArr = [];
+  s.split("");
+  for (let i = 0; i < s.length; i++) {
+    let currentChar = s[i];
+    if (currentChar === currentChar.toUpperCase()) {
+      upperArr.push(currentChar);
+    }
+  }
+  for (let i = 0; i < s.length; i++) {
+    let currentChar = s[i];
+    if (currentChar === currentChar.toLowerCase()) {
+      lowerArr.push(currentChar);
+    }
+  }
+  resultArr = upperArr.concat(lowerArr);
+  return resultArr.join("");
+}
+
+// https://edabit.com/challenge/8n9RyHThC3dNEPCng
+// Move Capital Letters to the Front
+
+function capToFront(s) {
+  const upperArr = [];
+  const lowerArr = [];
+  let resultArr = [];
+  s.split("");
+  for (let i = 0; i < s.length; i++) {
+    let currentChar = s[i];
+    if (currentChar === currentChar.toUpperCase()) {
+      upperArr.push(currentChar);
+    }
+  }
+  for (let i = 0; i < s.length; i++) {
+    let currentChar = s[i];
+    if (currentChar === currentChar.toLowerCase()) {
+      lowerArr.push(currentChar);
+    }
+  }
+  resultArr = upperArr.concat(lowerArr);
+  
 // https://edabit.com/challenge/Q2j5FTFtsk7PdzrQk
 // Remainder operator
 
@@ -155,5 +199,6 @@ function formatDate(date) {
   }
   resultArr.push(dayHold.join(""));
   resultArr.push(monthHold.join(""));
+
   return resultArr.join("");
 }
