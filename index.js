@@ -126,6 +126,82 @@ function sumArray(arr) {
   result = arr.flat(Infinity).reduce((sum, num) => sum + num);
   return result;
 }
+
+
+function capToFront(s) {
+  const upperArr = [];
+  const lowerArr = [];
+  let resultArr = [];
+  s.split("");
+  for (let i = 0; i < s.length; i++) {
+    let currentChar = s[i];
+    if (currentChar === currentChar.toUpperCase()) {
+      upperArr.push(currentChar);
+    }
+  }
+  for (let i = 0; i < s.length; i++) {
+    let currentChar = s[i];
+    if (currentChar === currentChar.toLowerCase()) {
+      lowerArr.push(currentChar);
+    }
+  }
+  resultArr = upperArr.concat(lowerArr);
+  return resultArr.join("");
+}
+
+// https://edabit.com/challenge/8n9RyHThC3dNEPCng
+// Move Capital Letters to the Front
+
+function capToFront(s) {
+  const upperArr = [];
+  const lowerArr = [];
+  let resultArr = [];
+  s.split("");
+  for (let i = 0; i < s.length; i++) {
+    let currentChar = s[i];
+    if (currentChar === currentChar.toUpperCase()) {
+      upperArr.push(currentChar);
+    }
+  }
+  for (let i = 0; i < s.length; i++) {
+    let currentChar = s[i];
+    if (currentChar === currentChar.toLowerCase()) {
+      lowerArr.push(currentChar);
+    }
+  }
+  resultArr = upperArr.concat(lowerArr);
+  
+// https://edabit.com/challenge/Q2j5FTFtsk7PdzrQk
+// Remainder operator
+
+function remainder(x, y) {
+  return x % y;
+}
+
+// https://edabit.com/challenge/NEPFa3NZSd8iiF3ps
+// Date Formatter MMDDYYYY
+
+function formatDate(date) {
+  const resultArr = [];
+  const dayHold = [];
+  const monthHold = [];
+  const dateArr = date.split("");
+  for (let i = dateArr.length - 1; i >= 0; i--) {
+    if (i < 2) {
+      monthHold.unshift(dateArr[i]);
+    }
+    if (i > 2 && i < 5) {
+      dayHold.unshift(dateArr[i]);
+    }
+    if (i > 5)
+      resultArr.unshift(dateArr[i]);
+  }
+  resultArr.push(dayHold.join(""));
+  resultArr.push(monthHold.join(""));
+
+  return resultArr.join("");
+}
+  
 // https://edabit.com/challenge/HZcpmfBg6NstB5soN
 // Converting One Binary String to Another
 
