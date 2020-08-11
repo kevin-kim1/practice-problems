@@ -128,7 +128,6 @@ function sumArray(arr) {
 }
 
 
-
 function capToFront(s) {
   const upperArr = [];
   const lowerArr = [];
@@ -201,4 +200,27 @@ function formatDate(date) {
   resultArr.push(monthHold.join(""));
 
   return resultArr.join("");
+}
+  
+// https://edabit.com/challenge/HZcpmfBg6NstB5soN
+// Converting One Binary String to Another
+
+function minSwaps(s1, s2) {
+		const s1Arr = s1.split('');
+		let s2Arr = s2.split('');
+		let swapCount = 0;
+		if (s1 === s2) {
+			return swapCount;
+		} else if (s1 !== s2) {
+					for (let i = 0; i < s2Arr.length; i++) {
+						if (s1Arr[i] !== s2Arr[i] && s1Arr[i] > s2Arr[i]) {
+								s2Arr[i]++;
+								swapCount++;
+							} else if (s1Arr[i] !== s2Arr[i] && s1Arr[i] < s2Arr[i]) {
+									s2Arr[i]--;
+									swapCount++;
+							}
+				}
+	 }
+	 return swapCount / 2;
 }
