@@ -229,8 +229,6 @@ function minSwaps(s1, s2) {
 // https://edabit.com/challenge/HT2dHkbzmLDZgsS7G
 // Promises IV: The Reject Callback
 
-
-
 let promise = new Promise( (resolve, reject) => {
 	let animal = "cat"
   setTimeout(() => {
@@ -242,3 +240,17 @@ let promise = new Promise( (resolve, reject) => {
 		}
   }, 1000)
 })
+
+// https://edabit.com/challenge/xsaGheX3yQ4g4Tb8b
+// Promises V: Then
+
+let result = "";
+
+let promise = new Promise((resolve, reject) => {
+	resolve(result);
+})
+
+promise.then((val) => {
+	val = "success!";
+	result = val;
+});
