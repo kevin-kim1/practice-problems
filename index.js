@@ -170,7 +170,7 @@ function capToFront(s) {
     }
   }
   resultArr = upperArr.concat(lowerArr);
-  
+
 // https://edabit.com/challenge/Q2j5FTFtsk7PdzrQk
 // Remainder operator
 
@@ -201,7 +201,7 @@ function formatDate(date) {
 
   return resultArr.join("");
 }
-  
+
 // https://edabit.com/challenge/HZcpmfBg6NstB5soN
 // Converting One Binary String to Another
 
@@ -224,3 +224,21 @@ function minSwaps(s1, s2) {
 	 }
 	 return swapCount / 2;
 }
+
+
+// https://edabit.com/challenge/HT2dHkbzmLDZgsS7G
+// Promises IV: The Reject Callback
+
+
+
+let promise = new Promise( (resolve, reject) => {
+	let animal = "cat"
+  setTimeout(() => {
+		if(animal === "dog") {
+			resolve("It's a dog!")
+		}
+	  if(animal !== "dog") {
+			reject("It's not a dog!")
+		}
+  }, 1000)
+})
