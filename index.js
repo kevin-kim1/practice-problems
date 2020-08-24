@@ -254,3 +254,77 @@ promise.then((val) => {
 	val = "success!";
 	result = val;
 });
+
+
+// https://edabit.com/challenge/5puuiuvW48dEsjkzW
+// Algorithms: Binary Search
+
+function isPrime(primes, num) {
+    const min = 0;
+    const max = primes.length - 1;
+    const midPoint = Math.trunc(max / 2);
+    let result = "no";
+    if (max < min) return -1;
+    if (num < primes[midPoint]) {
+       for (let i = min; i < midPoint; i++) {
+        if(primes[i] === num) {
+            result = "yes";
+        }
+      }
+    }
+    if (num > primes[midPoint]) {
+        for (let i = midPoint; i < max; i++) {
+            if(primes[i] === num) {
+                result = "yes";
+            }
+        }
+    }
+    return result;
+}
+
+// https://edabit.com/challenge/3ZtykTsx3GSoPHyBb
+// Tower of Hanoi
+
+function towerHanoi(discs) {
+    return Math.pow(2, discs) - 1;
+}
+
+// https://edabit.com/challenge/rLybgi7vcxL2ykt8F
+// Promises I: What Is a Closure?
+
+function greetingMaker() {
+    function closure(name) {
+    return salutation + ", " + name
+    }
+}
+
+const greeting = greetingMaker;
+return greeting;
+
+
+// https://edabit.com/challenge/W6RRCaj8mZJgiRAgy
+// Promises II: What Is a Callback?
+
+function anotherFunc(cb) {
+    let str = "bye"
+    setTimeout(() => {
+        cb(str);
+    }, 100)
+}
+
+var doc = "hello"
+
+function callback(str) {
+    doc = str
+}
+
+
+
+// https://edabit.com/challenge/8kTQqoWYQXRsKuYEf
+// Promises III: Native Promise, Introducing the Executor
+
+let promise = new Promise(() => {
+    setTimeout(() => {
+        resolve('edabit');
+    }, 100);
+})
