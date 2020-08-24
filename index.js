@@ -201,6 +201,21 @@ function formatDate(date) {
 
   return resultArr.join("");
 }
+  
+// https://edabit.com/challenge/6R6gReGTGwzpwuffD
+// Seven Boom
+
+function sevenBoom(arr) {
+  const str = arr.toString();
+  const regex = /7/g;
+  const found = str.match(regex);
+  if (found === null) {
+    return 'there is no 7 in the array';
+  }
+  if (found.toString() === '7') {
+    return 'Boom!';
+  }
+
 
 // https://edabit.com/challenge/HZcpmfBg6NstB5soN
 // Converting One Binary String to Another
@@ -328,3 +343,4 @@ let promise = new Promise(() => {
         resolve('edabit');
     }, 100);
 })
+
