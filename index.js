@@ -328,3 +328,13 @@ let promise = new Promise(() => {
         resolve('edabit');
     }, 100);
 })
+
+// https://edabit.com/challenge/3hdXjfJozQySRC3gE
+// How Many Days Between Two Dates
+
+
+function getDays(date1, date2) {
+		const oneDay = 24 * 60 * 60 * 1000;
+		const msDiff = Math.abs(date1 - date2);
+		return Math.round(msDiff / oneDay);
+}
