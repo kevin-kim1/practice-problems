@@ -201,7 +201,7 @@ function formatDate(date) {
 
   return resultArr.join("");
 }
-  
+
 // https://edabit.com/challenge/6R6gReGTGwzpwuffD
 // Seven Boom
 
@@ -352,4 +352,48 @@ function getDays(date1, date2) {
 		const oneDay = 24 * 60 * 60 * 1000;
 		const msDiff = Math.abs(date1 - date2);
 		return Math.round(msDiff / oneDay);
+}
+
+// https://edabit.com/challenge/ccZBsRp6pX869gyqx
+// The Karaca's Encryption Algorithm
+
+function encrypt(word) {
+	const wordArr = word.split("");
+	let reverseWordArr = [];
+	const endingStr = 'aca';
+	let resultArr = [];
+	for (let i = wordArr.length - 1; i >= 0; i--) {
+			reverseWordArr.push(wordArr[i]);
+	}
+	for (let j = 0; j < reverseWordArr.length; j++) {
+		if (reverseWordArr[j] === 'a') {
+			resultArr.push('0');
+		} else if (reverseWordArr[j] === 'e') {
+			resultArr.push('1');
+		} else if (reverseWordArr[j] === 'i') {
+			resultArr.push('1');
+		} else if (reverseWordArr[j] === 'o') {
+			resultArr.push('2');
+		} else if (reverseWordArr[j] === 'u') {
+			resultArr.push('3');
+		} else {
+			resultArr.push(reverseWordArr[j]);
+		}
+	}
+	resultArr.push(endingStr);
+	return resultArr.join("");
+}
+
+
+// https://edabit.com/challenge/b7iHQDw72zzkmgCun
+// Number of Boomerangs
+
+function countBoomerangs(arr) {
+    let boomerangCount = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === arr[i+2] && arr[i] !== arr[i+1]) {
+        boomerangCount++;
+        }
+    }
+    return boomerangCount;
 }
