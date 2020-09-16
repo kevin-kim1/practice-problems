@@ -397,3 +397,30 @@ function countBoomerangs(arr) {
     }
     return boomerangCount;
 }
+
+// https://edabit.com/challenge/5puuiuvW48dEsjkzW
+
+// Algorithms: Binary Search
+
+function isPrime(primes, num) {
+  const min = 0;
+  const max = primes.length - 1;
+  const midPoint = Math.trunc(max / 2);
+  let result = "no";
+  if (max < min) return -1;
+  if (num < primes[midPoint]) {
+    for (let i = min; i < midPoint; i++) {
+      if(primes[i] === num) {
+      result = "yes";
+      }
+    }
+  }
+  if (num > primes[midPoint]) {
+    for (let i = midPoint; i < max; i++) {
+      if(primes[i] === num) {
+      result = "yes";
+      }
+    }
+  }
+  return result;
+}
