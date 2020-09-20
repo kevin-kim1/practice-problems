@@ -433,3 +433,22 @@ function titleCase(title, minorWords) {
   const capitalization = (str) => str === '' ? '' : str[0].toUpperCase() + str.slice(1);
   return titleArr.map((item, index) => index !== 0 && minorWordsArr && minorWordsArr.includes(item) ? item : capitalization(item)).join(' ');
 }
+
+// Oddish or Evenish
+// https://edabit.com/challenge/r6TSNwkLZ2DgsoKiH
+
+function oddishOrEvenish(num) {
+	const numStr = num.toString().split('');
+	let sum = 0;
+	for (let i = 0; i < numStr.length; i++) {
+		sum += parseInt(numStr[i]);
+	}
+	if (sum % 2 === 0) {
+		return 'Evenish';
+	} else if (sum % 2 !==0){
+		return 'Oddish';
+	}
+}
+
+
+// dad
