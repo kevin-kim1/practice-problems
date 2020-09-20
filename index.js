@@ -450,5 +450,45 @@ function oddishOrEvenish(num) {
 	}
 }
 
+// Simple OOP Calculator
+// https://edabit.com/challenge/yxKoCKemzacK6PECM
 
-// dad
+class Calculator {
+	add(num1, num2) {
+		return num1 + num2;
+	}
+	subtract(num1, num2) {
+		return num1 - num2;
+	}
+	multiply(num1, num2) {
+		return num1 * num2;
+	}
+	divide(num1, num2) {
+		return num1 / num2;
+	}
+}
+
+// Design Patterns I: JavaScript Classes?!?
+// https://edabit.com/challenge/B48vyMsHdRtu39rfh
+
+function Book(author, published) {
+	this.author = 'author';
+	this.published = 'published';
+}
+
+var Author = {
+	name: 'name',
+	books: 'books'
+}
+
+var Publisher = new function() {
+	this.authors = 'authors';
+	this.books = 'books';
+}
+
+class Review {
+	constructor() {
+		this.rating = 'rating';
+		this.user = 'user';
+	}
+}
