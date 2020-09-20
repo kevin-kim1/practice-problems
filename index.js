@@ -450,5 +450,20 @@ function oddishOrEvenish(num) {
 	}
 }
 
+// Simple OOP Calculator
+// https://edabit.com/challenge/yxKoCKemzacK6PECM
 
-// dad
+class Calculator {
+	add(num1, num2) {
+		return num1 + num2;
+	}
+	subtract(num1, num2) {
+		return num1 - num2;
+	}
+	multiply(num1, num2) {
+		return num1 * num2;
+	}
+	divide(num1, num2) {
+		return num1 / num2;
+	}
+}
