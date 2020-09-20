@@ -424,3 +424,12 @@ function isPrime(primes, num) {
   }
   return result;
 }
+
+// Title Case
+
+function titleCase(title, minorWords) {
+  let titleArr = title.toLowerCase().split(' ');
+  let minorWordsArr = minorWords ? minorWords.toLowerCase().split(' ') : [];
+  const capitalization = (str) => str === '' ? '' : str[0].toUpperCase() + str.slice(1);
+  return titleArr.map((item, index) => index !== 0 && minorWordsArr && minorWordsArr.includes(item) ? item : capitalization(item)).join(' ');
+}
