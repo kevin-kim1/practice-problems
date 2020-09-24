@@ -493,3 +493,13 @@ class Calculator {
 		return num1 / num2;
 	}
 }
+
+
+// Reversing a Binary String
+// https://edabit.com/challenge/4s93F8ZiEdHjmMnMv
+
+  function reversedBinaryInteger(num) {
+    const reversedBinary = (num >>> 0).toString(2).split('').reverse().join('');
+    const result = parseInt(reversedBinary, 2)
+    return result;
+  }
