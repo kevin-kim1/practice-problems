@@ -503,3 +503,14 @@ class Calculator {
     const result = parseInt(reversedBinary, 2)
     return result;
   }
+
+  // Converting Objects to Arrays
+  // https://edabit.com/challenge/pPNAs5PvB3WvnDwDM
+
+  function toArray(obj) {
+    const resultArr = [];
+    for (const [key, value] of Object.entries(obj)) {
+      resultArr.push([key, value]);
+    }
+    return resultArr;
+  }
