@@ -514,3 +514,11 @@ class Calculator {
     }
     return resultArr;
   }
+
+
+// Fix the Error: Value vs. Reference Types
+// https://edabit.com/challenge/3jZyJTfsXTXXwAQkA
+
+  function checkEquals(arr1, arr2) {
+    return arr1.join() === arr2.join();
+  }
