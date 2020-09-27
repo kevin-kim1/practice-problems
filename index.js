@@ -522,3 +522,17 @@ class Calculator {
   function checkEquals(arr1, arr2) {
     return arr1.join() === arr2.join();
   }
+
+// Bitwise Operator to Check Odd, Regular Expression to Check Even
+// https://edabit.com/challenge/uroPr8CNouxobtShi
+
+function isOdd(number) {
+	return (number & 1) ? 'Yes' : 'No';
+}
+
+function isEven(number) {
+	const numArr = number.split('');
+	const regex = new RegExp("^\d*[02468]$");
+	const regexTest = regex.test(numArr[numArr.length - 1]);
+	return (regexTest) ? 'Yes' : 'No';
+}
