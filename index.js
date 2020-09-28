@@ -530,9 +530,23 @@ function isOdd(number) {
 	return (number & 1) ? 'Yes' : 'No';
 }
 
+
 function isEven(number) {
 	const numArr = number.split('');
 	const regex = new RegExp("^\d*[02468]$");
 	const regexTest = regex.test(numArr[numArr.length - 1]);
 	return (regexTest) ? 'Yes' : 'No';
+}
+
+
+// Fibonacci Recursion
+// https://edabit.com/challenge/Cfe88oSTXyxihiPhu
+
+function fib(n) {
+	if (n === 1) {
+		return 1;
+	} else if (n === 0) {
+		return 0;
+	}
+  return fib(n - 1) + fib(n - 2);
 }
