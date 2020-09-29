@@ -550,3 +550,12 @@ function fib(n) {
 	}
   return fib(n - 1) + fib(n - 2);
 }
+
+
+// Distance Between Two Points
+// https://edabit.com/challenge/caeSeQ3K53GMQKenX
+
+function getDistance(a, b) {
+	const distance = Math.sqrt(Math.pow(b.x - a.x, 2)  + Math.pow(b.y - a.y, 2));
+	return parseFloat(distance.toFixed(3));
+}
