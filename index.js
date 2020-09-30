@@ -559,3 +559,27 @@ function getDistance(a, b) {
 	const distance = Math.sqrt(Math.pow(b.x - a.x, 2)  + Math.pow(b.y - a.y, 2));
 	return parseFloat(distance.toFixed(3));
 }
+
+
+// Positive Dominant
+// https://edabit.com/challenge/7pkKPYtTJzpxRMckZ
+
+function isPositiveDominant(a) {
+	let uniquePositives = 0;
+	let uniqueNegatives = 0;
+	let hold = 0
+	for (let i = 0; i < a.length; i++) {
+			if (a[i] > 0 && hold !== a[i]) {
+				 uniquePositives++;
+				 hold = a[i];
+			} else if (a[i] < 0 && hold !== a[i]) {
+				 uniqueNegatives++;
+				 hold = a[i];
+			}
+	}
+	if(uniquePositives > uniqueNegatives) {
+		return true;
+	} else {
+		return false;
+	}
+}
