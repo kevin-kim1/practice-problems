@@ -583,3 +583,15 @@ function isPositiveDominant(a) {
 		return false;
 	}
 }
+
+// Iterated Square Root
+
+  function iSqrt(n) {
+    if (n < 0) return 'invalid';
+    var count = 0;
+    while (n >= 2) {
+      n = Math.sqrt(n);
+      count++;
+    }
+    return count;
+  }
