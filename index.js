@@ -595,3 +595,12 @@ function isPositiveDominant(a) {
     }
     return count;
   }
+
+
+  // Length of a Nested Array
+  // https://edabit.com/challenge/yXSTvCNen2DQHyrh6
+
+  function getLength(arr) {
+    const flattenArr = arr.flat(Infinity);
+    return flattenArr.length;
+  }
