@@ -597,10 +597,27 @@ function isPositiveDominant(a) {
   }
 
 
+  // Finding Common Elements
+  // https://edabit.com/challenge/jtAvQyyDpFA2EaCcj
+
+  function commonElements(arr1, arr2) {
+    let arr1Set = new Set();
+    let resultArr = []
+    for (let arr1Index = 0; arr1Index < arr1.length; arr1Index++) {
+      arr1Set.add(arr1[arr1Index]);
+    }
+    for (let arr2Index = 0; arr2Index < arr2.length; arr2Index++) {
+      if (arr1Set.has(arr2[arr2Index])) {
+        resultArr.push(arr2[arr2Index]);
+      }
+    }
+    return resultArr;
+
   // Length of a Nested Array
   // https://edabit.com/challenge/yXSTvCNen2DQHyrh6
 
   function getLength(arr) {
     const flattenArr = arr.flat(Infinity);
     return flattenArr.length;
+
   }
