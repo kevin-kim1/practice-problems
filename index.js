@@ -596,9 +596,9 @@ function isPositiveDominant(a) {
     return count;
   }
 
+
   // Finding Common Elements
   // https://edabit.com/challenge/jtAvQyyDpFA2EaCcj
-
 
   function commonElements(arr1, arr2) {
     let arr1Set = new Set();
@@ -612,4 +612,12 @@ function isPositiveDominant(a) {
       }
     }
     return resultArr;
+
+  // Length of a Nested Array
+  // https://edabit.com/challenge/yXSTvCNen2DQHyrh6
+
+  function getLength(arr) {
+    const flattenArr = arr.flat(Infinity);
+    return flattenArr.length;
+
   }
