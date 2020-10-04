@@ -639,3 +639,18 @@ function isPositiveDominant(a) {
 	}
 	return comboArr;
 };
+
+
+//Count Instances of a Character in a String
+// https://edabit.com/challenge/kbFhwaDyrd79JrgeB
+
+function charCount(myChar, str) {
+	const strArr = str.split('');
+	let count = 0;
+	for (let i = 0; i < strArr.length; i++) {
+		  if(myChar === strArr[i]) {
+				count++;
+			}
+	}
+	return count;
+}
