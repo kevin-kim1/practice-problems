@@ -621,3 +621,21 @@ function isPositiveDominant(a) {
     return flattenArr.length;
 
   }
+
+  // Safecracker
+  // https://edabit.com/challenge/ggDcLksKsBd8xAiFd
+
+  const safecracker = (start, increments) => {
+	const comboArr = [];
+	comboArr.push(start - increments[0]);
+	comboArr.push(start - increments[0] + increments[1]);
+	comboArr.push(start - increments[0] + increments[1] - increments[2]);
+	for (let index = 0; index < comboArr.length; index++) {
+		 if (comboArr[index] < 0) {
+			  comboArr[index] += 100;
+		 } else if (comboArr[index] >= 100) {
+			 comboArr[index] -= 100;
+		 }
+	}
+	return comboArr;
+};
