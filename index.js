@@ -654,3 +654,17 @@ function charCount(myChar, str) {
 	}
 	return count;
 }
+
+// https://edabit.com/challenge/WjXHgXLAvMxNvD6h2
+// Numbers in Strings
+
+function numInStr(arr) {
+	const resultArr = [];
+	const regex = /[0-9]/g;
+	for (let i = 0; i < arr.length; i++) {
+		  if (arr[i].match(regex)) {
+				 resultArr.push(arr[i])
+		  }
+	}
+  return resultArr;
+}
