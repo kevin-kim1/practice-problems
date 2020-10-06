@@ -668,3 +668,24 @@ function numInStr(arr) {
 	}
   return resultArr;
 }
+
+
+// Calculated Bonus
+// https://edabit.com/challenge/cYcKEFos6DjYQpGS7
+
+function calculateBonus(days) {
+	let bonus = 0;
+	if (days <= 32) return bonus;
+	if (days > 32) {
+		 for (let i = 32; i <= days; i++) {
+			   if (i >= 33 &&  i <= 40) {
+					  bonus += 325;
+				 } else if (i >= 41 &&  i <= 48) {
+					  bonus += 550;
+				 } else if (i > 48) {
+					  bonus += 600;
+				 }
+		 }
+	}
+	return bonus;
+}
