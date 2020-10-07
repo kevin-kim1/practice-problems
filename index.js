@@ -689,3 +689,20 @@ function calculateBonus(days) {
 	}
 	return bonus;
 }
+
+// Temperature Converter
+// https://edabit.com/challenge/QW5CApff3WAGszrWY
+
+function tempConversion(celsius) {
+	const resultArr = [];
+	const f = celsius * (9/5) + 32;
+	const k = celsius + 273.15;
+	const numF = parseFloat(f.toFixed(2));
+	const numK = parseFloat(k.toFixed(2));
+	if (numF <= -459.69 && numK <= -0.01) {
+		 return 'Invalid';
+	}
+	resultArr.push(numF);
+	resultArr.push(numK);
+	return resultArr;
+}
