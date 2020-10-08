@@ -706,3 +706,24 @@ function tempConversion(celsius) {
 	resultArr.push(numK);
 	return resultArr;
 }
+
+// Sum of Slices of an Array (Part 1)
+// https://edabit.com/challenge/iaySFYs3oTQDboeqd
+
+const sumOfSlices = (arr) => {
+	let resultArr = [];
+	let sum = 0;
+	for (let i = 0; i < arr.length; i++){
+		if (sum + arr[i] < 100) {
+			 sum += arr[i]
+		} else {
+				resultArr.push(sum);
+			  sum = arr[i];
+		}
+
+		if(i + 1 === arr.length)
+			resultArr.push(sum)
+	}
+
+	return resultArr;
+}
