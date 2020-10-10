@@ -742,3 +742,23 @@ function lcm(n1, n2) {
 		 return n1 * n2;
 	}
 }
+
+// Leader in an Array
+// https://edabit.com/challenge/wYdQGudMRdzME5B7m
+
+function leader(arr) {
+	const maxNum = Math.max(...arr);
+	const leaderArr = [];
+	const arrLen = arr.length;
+	for (let i = 0; i < arrLen; i++) {
+		  if (arr[i] === maxNum) {
+				 for (i; i < arrLen; i++) {
+					   if (i === arrLen - 1) {
+							 leaderArr.push(arr[i]);
+						 }
+					   if(arr[i] <= maxNum && arr[i] > arr[i + 1]) {
+							 leaderArr.push(arr[i]);
+						 }
+				 }
+			}
+	}
