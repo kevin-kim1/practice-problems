@@ -762,3 +762,11 @@ function leader(arr) {
 				 }
 			}
 	}
+
+
+// Pentagonal Number
+// https://edabit.com/challenge/wmdanmJkaT9waTg3y
+
+function pentagonal(num) {
+	return ((5 * Math.pow(num, 2)) - (5 * num) + 2) / 2;
+}
