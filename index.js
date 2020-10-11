@@ -770,3 +770,19 @@ function leader(arr) {
 function pentagonal(num) {
 	return ((5 * Math.pow(num, 2)) - (5 * num) + 2) / 2;
 }
+
+
+// Double Character Swap
+// https://edabit.com/challenge/NfBqxaDu4KoxAysWF
+
+function doubleSwap(str, c1, c2) {
+	let strArr = str.split('');
+	for (let i = 0; i < strArr.length; i++) {
+			if (strArr[i] === c1) {
+				 strArr[i] = c2;
+			} else if (strArr[i] === c2) {
+				 strArr[i] = c1;
+			}
+	}
+	return strArr.join('');
+}
