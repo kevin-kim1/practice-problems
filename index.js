@@ -835,3 +835,12 @@ function centuryFromYear(year) {
     if (year >= 2001 && year <= 2100)
        return 21;
 }
+
+
+function checkPalindrome(inputString) {
+    const resultArr = [];
+    for (let i = inputString.length - 1; i >= 0; i--) {
+        resultArr.push(inputString.charAt(i));
+    }
+    return resultArr.join('') === inputString ? true : false;
+}
