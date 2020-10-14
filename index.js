@@ -796,7 +796,7 @@ function centuryFromYear(year) {
        return 1;
     if (year >= 101 && year <= 200)
        return 2;
-    if (year >= 101 && year <= 200)
+    if (year >= 201 && year <= 300)
        return 3;
     if (year >= 301 && year <= 400)
        return 4;
@@ -832,6 +832,6 @@ function centuryFromYear(year) {
        return 19;
     if (year >= 1901 && year <= 2000)
        return 20;
-    if (year >= 2001 && year <= 2005)
+    if (year >= 2001 && year <= 2100)
        return 21;
 }
