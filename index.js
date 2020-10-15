@@ -850,8 +850,6 @@ function adjacentElementsProduct(inputArray) {
     let temp;
     for (let i = 1; i < inputArray.length; i++) {
         temp = inputArray[i] * inputArray[i + 1];
-        console.log(temp);
-        console.log(product);
         if (temp > product) {
             product = temp;
         }
