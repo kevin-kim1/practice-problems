@@ -844,3 +844,17 @@ function checkPalindrome(inputString) {
     }
     return resultArr.join('') === inputString ? true : false;
 }
+
+function adjacentElementsProduct(inputArray) {
+    let product = inputArray[0] * inputArray[1]
+    let temp;
+    for (let i = 1; i < inputArray.length; i++) {
+        temp = inputArray[i] * inputArray[i + 1];
+        console.log(temp);
+        console.log(product);
+        if (temp > product) {
+            product = temp;
+        }
+    }
+    return product;
+}
