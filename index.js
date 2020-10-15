@@ -845,6 +845,7 @@ function checkPalindrome(inputString) {
     return resultArr.join('') === inputString ? true : false;
 }
 
+
 function adjacentElementsProduct(inputArray) {
     let product = inputArray[0] * inputArray[1]
     let temp;
@@ -855,4 +856,9 @@ function adjacentElementsProduct(inputArray) {
         }
     }
     return product;
+}
+
+
+function shapeArea(n) {
+    return n * n + (n - 1) * (n - 1);
 }
