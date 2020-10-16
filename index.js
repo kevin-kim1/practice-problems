@@ -844,3 +844,8 @@ function checkPalindrome(inputString) {
     }
     return resultArr.join('') === inputString ? true : false;
 }
+
+
+function numberLenSort(arr) {
+	return arr.sort(function(a, b){return a.toString().length - b.toString().length})
+	}
