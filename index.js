@@ -848,4 +848,17 @@ function checkPalindrome(inputString) {
 
 function numberLenSort(arr) {
 	return arr.sort(function(a, b){return a.toString().length - b.toString().length})
-	}
+}
+  
+  
+function adjacentElementsProduct(inputArray) {
+    let product = inputArray[0] * inputArray[1]
+    let temp;
+    for (let i = 1; i < inputArray.length; i++) {
+        temp = inputArray[i] * inputArray[i + 1];
+        if (temp > product) {
+            product = temp;
+        }
+    }
+    return product;
+}
