@@ -864,4 +864,5 @@ function makeArrayConsecutive2(statues) {
     const min = Math.min(...statues);
     const max = Math.max(...statues);
     const completeStatuesArr = Array.from({length: max - min + 1}, (v, i) => i + min);
+    return completeStatuesArr.length - statues.length;
 }
