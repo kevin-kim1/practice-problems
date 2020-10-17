@@ -836,7 +836,6 @@ function centuryFromYear(year) {
        return 21;
 }
 
-
 function checkPalindrome(inputString) {
     const resultArr = [];
     for (let i = inputString.length - 1; i >= 0; i--) {
@@ -845,12 +844,10 @@ function checkPalindrome(inputString) {
     return resultArr.join('') === inputString ? true : false;
 }
 
-
 function numberLenSort(arr) {
 	return arr.sort(function(a, b){return a.toString().length - b.toString().length})
 }
-  
-  
+
 function adjacentElementsProduct(inputArray) {
     let product = inputArray[0] * inputArray[1]
     let temp;
@@ -861,4 +858,11 @@ function adjacentElementsProduct(inputArray) {
         }
     }
     return product;
+}
+
+function makeArrayConsecutive2(statues) {
+    const min = Math.min(...statues);
+    const max = Math.max(...statues);
+    const completeStatuesArr = Array.from({length: max - min + 1}, (v, i) => i + min);
+    return completeStatuesArr.length - statues.length;
 }
