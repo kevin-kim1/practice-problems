@@ -866,3 +866,12 @@ function makeArrayConsecutive2(statues) {
     const completeStatuesArr = Array.from({length: max - min + 1}, (v, i) => i + min);
     return completeStatuesArr.length - statues.length;
 }
+
+// Staircase of Recursion
+// https://edabit.com/challenge/APCAgm5FRnnC7ar87
+
+  function waysToClimb(n) {
+    if (n <= 1)
+      return 1;
+    return waysToClimb(n - 1) + waysToClimb(n - 2);
+  }
