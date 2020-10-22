@@ -875,3 +875,16 @@ function makeArrayConsecutive2(statues) {
       return 1;
     return waysToClimb(n - 1) + waysToClimb(n - 2);
   }
+
+  function almostIncreasingSequence(arr) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] <= arr[i - 1]) {
+            count++
+            if(arr[i] <= arr[i - 2] && arr[i + 1] <= arr[i - 1]) {
+                return false;
+            }
+        }
+    }
+    return count <= 1;
+}
