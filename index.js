@@ -888,3 +888,14 @@ function makeArrayConsecutive2(statues) {
     }
     return count <= 1;
 }
+
+// Is the Number a Repdigit
+// https://edabit.com/challenge/8vSpPNjNx6JBcvxdc
+
+function isRepdigit(num) {
+	if(num >= 0 && num % 2 === 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
