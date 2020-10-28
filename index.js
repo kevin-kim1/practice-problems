@@ -899,3 +899,26 @@ function isRepdigit(num) {
 		return false;
 	}
 }
+
+// Paint the Walls
+// https://edabit.com/challenge/2p2sdgq39fysByKba
+
+function time(obj, people, walls) {
+	const rate = obj.minutes / obj.walls * obj.people;
+	return rate * walls / people;
+}
+
+function matrixElementsSum(matrix) {
+let total = 0;
+const bannedIndex = [];
+    for (let row = 0; row < matrix.length; row++) {
+        for (let column = 0; column < matrix[row].length; column++) {
+            if (matrix[row][column] === 0) {
+                bannedIndex.push(column);
+            } else if (bannedIndex.indexOf(column) === -1) {
+                total += matrix[row][column];
+            }
+        }
+    }
+    return total;
+}
