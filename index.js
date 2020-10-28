@@ -899,3 +899,12 @@ function isRepdigit(num) {
 		return false;
 	}
 }
+
+
+// Paint the Walls
+// https://edabit.com/challenge/2p2sdgq39fysByKba
+
+function time(obj, people, walls) {
+	const rate = obj.minutes / obj.walls * obj.people;
+	return rate * walls / people;
+}
