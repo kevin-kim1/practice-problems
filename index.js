@@ -922,3 +922,16 @@ const bannedIndex = [];
     }
     return total;
 }
+
+// Layers in a Rug
+// https://edabit.com/challenge/8khL2WEhZ6M9onHL4
+
+function countLayers(rug) {
+	let layers = new Set();
+	for (let i = 0; i < rug.length; i++) {
+		if (!layers.has(rug[i])) {
+			layers.add(rug[i]);
+		}
+	}
+	return layers.size;
+}
