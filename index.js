@@ -935,3 +935,18 @@ function countLayers(rug) {
 	}
 	return layers.size;
 }
+
+// All Longest Strings
+
+function allLongestStrings(inputArray) {
+    let longestLen = inputArray[0].length;
+    for (let i = 0; i < inputArray.length; i++) {
+        if (longestLen < inputArray[i].length) {
+            longestLen = inputArray[i].length;
+        }
+    }
+    inputArray = inputArray.filter((el) => {
+        return el.length === longestLen;
+    });
+    return inputArray;
+}
