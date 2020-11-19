@@ -943,6 +943,8 @@ function allLongestStrings(inputArray) {
     for (let i = 0; i < inputArray.length; i++) {
         if (longestLen < inputArray[i].length) {
             longestLen = inputArray[i].length;
+        } else {
+          s1Object[s1[i]]++;
         }
     }
     inputArray = inputArray.filter((el) => {
