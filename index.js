@@ -959,5 +959,10 @@ function commonCharacterCount(s1, s2) {
   s2 = s2.split('');
   let s1Obj = {};
   let s2Obj = {};
+  for (let i = 0; i < s1.length; i++) {
+    if (s1Object.hasOwnProperty(s1[i]) === false) {
+      s1Object[s1[i]] = 1;
+    }
+  }
 
 }
