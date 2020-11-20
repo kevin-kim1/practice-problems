@@ -975,6 +975,10 @@ function isLucky(n) {
  let secondHalf = 0;
  n = n.toString().split('');
  for (let i = 0; i < n.length; i++) {
-
+    if (i <= (n.length / 2) - 1) {
+        firstHalf += parseInt(n[i]);
+     } else {
+        secondHalf += parseInt(n[i]);
+     }
  }
 }
