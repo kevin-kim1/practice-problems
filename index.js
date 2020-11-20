@@ -981,4 +981,5 @@ function isLucky(n) {
         secondHalf += parseInt(n[i]);
      }
  }
+ return (firstHalf === secondHalf ? true : false);
 }
