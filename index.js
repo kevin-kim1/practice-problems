@@ -973,4 +973,5 @@ function commonCharacterCount(s1, s2) {
 function isLucky(n) {
  let firstHalf = 0;
  let secondHalf = 0;
+ const mid = n.length / 2;
 }
