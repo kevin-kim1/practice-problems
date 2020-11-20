@@ -957,33 +957,29 @@ function allLongestStrings(inputArray) {
 // Common Character Count
 
 function commonCharacterCount(s1, s2) {
-  s1 = s1.split('');
-  s2 = s2.split('');
-  let s1Obj = {};
-  let s2Obj = {};
-  for (let i = 0; i < s1.length; i++) {
-    if (s1Object.hasOwnProperty(s1[i]) === false) {
-      s1Object[s1[i]] = 1;
-    } else {
-      s1Obj[s1[i]]++:
+  const s2Arr = s2.split('');
+  let result = 0;
+  for(let i = 0; i < s1.length; i++){
+   if(s2Arr.indexOf(s1[i]) !== -1){
+     s2Arr.splice(s2Arr.indexOf(s1[i]),1);
+      result++;
     }
   }
-  for (let i = 0; i < s2.length; i++) {
-    if (s2Object.hasOwnProperty(s2[i]) === false) {
-      s2Object[s2[i]] = 1;
-    } else {
-      s2Obj[s2[i]]++
-    }
-  }
-  let total = 0;
-  for (let prop in s2Obj) {
-      if (s1Object.hasOwnProperty(prop) === true ) {
-         if (s1Object[prop] < s2Object[prop]) {
-           total += s1Object[prop];
-         } else {
-           total += s2Object[prop];
-         }
-      }
-  }
-  return total;
+ return result;
+}
+
+// isLucky
+
+function isLucky(n) {
+ let firstHalf = 0;
+ let secondHalf = 0;
+ n = n.toString().split('');
+ for (let i = 0; i < n.length; i++) {
+    if (i <= (n.length / 2) - 1) {
+        firstHalf += parseInt(n[i]);
+     } else {
+        secondHalf += parseInt(n[i]);
+     }
+ }
+ return (firstHalf === secondHalf ? true : false);
 }
