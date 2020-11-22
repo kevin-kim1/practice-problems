@@ -989,4 +989,9 @@ function isLucky(n) {
 function sortByHeight(a) {
     const nonNegativeArr = [];
     let nonNegativeIndex = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] !== -1) {
+            nonNegativeArr.push(a[i])
+        }
+    }
 }
