@@ -994,4 +994,7 @@ function sortByHeight(a) {
             nonNegativeArr.push(a[i])
         }
     }
+    nonNegativeArr.sort((a,b) => {
+        return a - b;
+    });
 }
