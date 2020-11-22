@@ -983,3 +983,10 @@ function isLucky(n) {
  }
  return (firstHalf === secondHalf ? true : false);
 }
+
+// Sort By Height
+
+function sortByHeight(a) {
+    const nonNegativeArr = [];
+    let nonNegativeIndex = 0;
+}
