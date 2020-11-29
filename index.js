@@ -1006,3 +1006,10 @@ function sortByHeight(a) {
     }
     return a;
 }
+
+// Reverse Parentheses
+function reverseInParentheses(inputString) {
+    if (inputString.includes('(')) {
+       return reverseInParentheses();
+    } return s;
+}
