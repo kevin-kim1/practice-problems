@@ -1010,10 +1010,11 @@ function sortByHeight(a) {
 // Reverse Parentheses
 function reverseInParentheses(inputString) {
     if (inputString.includes('(')) {
-       return reverseInParentheses();
+       return reverseInParentheses(reverseParenStr(inputString));
     } return inputString;
 }
 
-function reverseParenStr() {
-    let regexp = /\(([^()]*)\)/i;
+function reverseParenStr(str) {
+    const regexp = /\(([^()]*)\)/i;
+    let subStr = regexp.exec(str)[1];
 }
