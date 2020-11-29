@@ -1017,4 +1017,6 @@ function reverseInParentheses(inputString) {
 function reverseParenStr(str) {
     const regexp = /\(([^()]*)\)/i;
     let subStr = regexp.exec(str)[1];
+    subStr = subStr.split("").reverse().join("");
+    return str.replace(regexp, subStr);
 }
