@@ -1006,3 +1006,17 @@ function sortByHeight(a) {
     }
     return a;
 }
+
+// Reverse Parentheses
+function reverseInParentheses(inputString) {
+    if (inputString.includes('(')) {
+       return reverseInParentheses(reverseParenStr(inputString));
+    } return inputString;
+}
+
+function reverseParenStr(str) {
+    const regexp = /\(([^()]*)\)/i;
+    let subStr = regexp.exec(str)[1];
+    subStr = subStr.split("").reverse().join("");
+    return str.replace(regexp, subStr);
+}
