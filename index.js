@@ -1013,3 +1013,7 @@ function reverseInParentheses(inputString) {
        return reverseInParentheses();
     } return inputString;
 }
+
+function reverseParenStr() {
+    let regexp = /\(([^()]*)\)/i;
+}
