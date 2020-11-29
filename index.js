@@ -1011,5 +1011,5 @@ function sortByHeight(a) {
 function reverseInParentheses(inputString) {
     if (inputString.includes('(')) {
        return reverseInParentheses();
-    } return s;
+    } return inputString;
 }
