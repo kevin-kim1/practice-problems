@@ -1020,3 +1020,11 @@ function reverseParenStr(str) {
     subStr = subStr.split("").reverse().join("");
     return str.replace(regexp, subStr);
 }
+
+
+// alternatingSums
+
+function alternatingSums(a) {
+    let team1 = 0;
+    let team2 = 0;
+}
