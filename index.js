@@ -1027,6 +1027,7 @@ function reverseParenStr(str) {
 function alternatingSums(a) {
     let team1 = 0;
     let team2 = 0;
+    const twoSumArr = [];
     for (let i = 0; i < a.length; i++) {
         if(i % 2 === 0) {
             team1 += a[i];
@@ -1034,4 +1035,7 @@ function alternatingSums(a) {
             team2 += a[i];
         }
     }
+    twoSumArr.push(team1);
+    twoSumArr.push(team2);
+    return twoSumArr;
 }
