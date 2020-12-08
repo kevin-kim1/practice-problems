@@ -1020,3 +1020,7 @@ function reverseParenStr(str) {
     subStr = subStr.split("").reverse().join("");
     return str.replace(regexp, subStr);
 }
+
+function doesBrickFit(a,b,c, w,h) {
+	return a + b + c - w - h < 3;
+}
