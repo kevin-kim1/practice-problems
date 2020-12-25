@@ -1039,3 +1039,26 @@ function alternatingSums(a) {
     twoSumArr.push(team2);
     return twoSumArr;
 }
+
+// addBorder
+
+function addBorder(picture) {
+    let topAndBotttomRow = [];
+    const resultArr = [];
+    const calcStars = picture[0].length + 2;
+    for (let i = 0; i < calcStars; i++) {
+        topAndBotttomRow.push('*');
+    }
+    for (let i = 0; i < picture.length; i++) {
+        let adjustedStr = [];
+        adjustedStr.push(picture[i]);
+        adjustedStr.unshift('*');
+        adjustedStr.push('*');
+        adjustedStr = adjustedStr.join('');
+        resultArr.push(adjustedStr);
+    }
+    topAndBotttomRow = topAndBotttomRow.join('');
+    resultArr.unshift(topAndBotttomRow);
+    resultArr.push(topAndBotttomRow);
+    return resultArr;
+}
