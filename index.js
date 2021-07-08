@@ -1021,8 +1021,9 @@ function reverseParenStr(str) {
     return str.replace(regexp, subStr);
 }
 
+function doesBrickFit(a,b,c, w,h) {
+	return a + b + c - w - h < 3;
 
-// alternatingSums
 
 function alternatingSums(a) {
     let team1 = 0;
